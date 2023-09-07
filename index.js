@@ -50,11 +50,9 @@ const pizzas = [
 //========================================================================================================================
 
 //Filter me busca todos los elementos del array que cumplan la condicion, en este caso impar
-const idImpar = pizzas.filter((elemento) => elemento.id % 2 != 0);
+const idImpar = pizzas.filter((elemento) => elemento.id % 2 !== 0);
 idImpar.forEach((elemento) => {
-  console.log(
-    `id: ${elemento.id}, Nombre: ${elemento.nombre}, Precio: ${elemento.precio}, Ingredientes: ${elemento.ingredientes}`
-  );
+  console.log(`La ${elemento.nombre} tiene el id: ${elemento.id}`);
 });
 
 console.log(
@@ -79,7 +77,7 @@ console.log(
 //Nombres de las pizzas con su precio
 
 pizzas.forEach((elemento) => {
-  console.log(`Nombre: ${elemento.nombre}, Precio $${elemento.precio}`);
+  console.log(`La ${elemento.nombre} tiene un precio de $${elemento.precio}`);
 });
 console.log(
   "======================================================================================================================="
@@ -88,6 +86,6 @@ console.log(
 
 pizzas.forEach((elemento) => {
   console.log(
-    `Nombre: ${elemento.nombre}, Ingredientes: ${elemento.ingredientes}`
+    `La ${elemento.nombre} tiene los siguientes ingredientes: ${elemento.ingredientes}`
   );
 });
