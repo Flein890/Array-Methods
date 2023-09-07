@@ -62,11 +62,15 @@ console.log(
 );
 
 //¿Hay alguna pizza menor a $600?
-const pizzaBarata = pizzas.filter((numero) => numero.precio < 600);
+const pizzaBarata = pizzas.some((numero) => numero.precio < 600);
 
-pizzaBarata.forEach((elemento) => {
-  console.log(`La pizza que cuesta menos de $600 es la ${elemento.nombre}`);
-});
+console.log("¿Hay alguna pizza que valga menos de $600?");
+
+if (pizzaBarata === true) {
+  console.log("Si, hay una pizza que vale menos de $600");
+} else {
+  console.log("No, ninguna pizza que vale menos de $600");
+}
 
 console.log(
   "======================================================================================================================="
